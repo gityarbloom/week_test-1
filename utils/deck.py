@@ -1,5 +1,3 @@
-from random import randint
-
 def create_card(rank:str, suite:str):
     card = {"rank": rank, "suite": suite}
     if card["rank"] == "J":
@@ -26,8 +24,8 @@ def compare_cards(p1_card:dict, p2_card:dict):
 
 def create_deck():
     packet = []
-    suits_cards = ["H", "C", "D", "S"]
-    for suit in suits_cards:
+    Suits_cards = ["H", "C", "D", "S"]
+    for suit in Suits_cards:
         for rank in range(2, 15):
             if rank < 11:
                 new_card = create_card(str(rank), suit)
@@ -44,14 +42,14 @@ def create_deck():
     return packet
 
 
+from random import randint
+
 def shuffle(deck: list[dict]):
     for i in range(1000):
-        index1 = randint(0, 51)
-        index2 = randint(0, 51)
+        index1 = randint
+        index2 = randint
         if index1 == index2:
             continue
         deck[index1], deck[index2] = deck[index2], deck[index1]
     return deck
 
-# unmixed_cards_deck = create_deck()
-# mixed_cards_deck = shuffle(unmixed_cards_deck)
